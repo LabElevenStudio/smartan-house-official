@@ -1,0 +1,10 @@
+:root{
+    --green: hsl(160, 68%, 36%);
+    --magenta: hsl(335, 85%, 55%);
+    --forest: hsl(197, 37%, 24%);
+    --brick: hsl(13, 72%, 51%);
+    --purple: hsl(302, 58%, 36%);
+    --orange: hsl(33, 93%, 54%);
+    --tomato: hsl(0, 100%, 50%);
+    --family: 'Plus Jakarta Sans', sans-serif;
+}
