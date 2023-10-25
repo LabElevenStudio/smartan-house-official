@@ -4,6 +4,61 @@ layout: base.njk
 ---
 
 
-<ul>
-	<h1 class="hello">hello</h1>
-</ul>
+<main class="flex-container index-wrapper">
+	<header class="flex-container">
+		<h1>meet the <span>smartans</span></h1>
+		<p>smartans are young smart africans who are passionate about changing the african narrative and positioning themselves for global impact</p>
+		<div class="img-container">
+		<img src="./assets/solomon.jpg" alt="solomon" class="solomon">
+		</div>
+	</header>
+	<main class="content wrapper flex-container">
+
+		<section class="" id="section-one">
+
+			<div id="img-wrapper">
+				<img src="./assets/brainandmarvel.png" alt="">
+				<div class="circle"></div>
+			</div>
+
+			<article class="flex-container">
+				<h2>When young people are passionate about change.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus fugiat esse aspernatur perferendis veritatis eius commodi blanditiis reiciendis aliquid ad!</p>
+				{%- from "components/button/macro.njk" import button -%}
+				
+				{{button ({text: 'learn more'}) }}
+			</article>
+		</section>
+		<section class="signals flex-container" id="section-two">
+			<article class="flex-container">
+				<h2>smartan <span>signals</span></h2>
+				<p>The smartan signals are intrinsic attributes that distingushes a smartan from the crowd and makes them fit for any role.</p>
+			</article>
+			<section class="grid-container signals-grid">
+				<div class="signals-grid-item"></div>
+				<div class="signals-grid-item"></div>
+				<div class="signals-grid-item"></div>
+				<div class="signals-grid-item"></div>
+				<div class="signals-grid-item"></div>
+				<div class="signals-grid-item"></div>
+			</section>
+		</section>
+		<section class="story wrapper flex-container" id="section-three" >
+			<h2>smartan <span>story</span></h2>
+
+		</section>
+		<section class="becoming wrapper flex-container" id="section-four">
+			<h2>becoming a <span>smartan</span></h2>
+			<section class="becoming-content">
+				<article class="wrapper flex-container">
+					<h3><span>the</span> crucible</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium sequi voluptate aliquid nostrum quas alias, dignissimos sint voluptas voluptatum!</p>
+				</article>
+				<div>
+					<img src="" alt="">
+					<div class="circle"></div>
+				</div>
+			</section>
+		</section>
+	</main>
+</main>
