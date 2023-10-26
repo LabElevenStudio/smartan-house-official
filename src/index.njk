@@ -12,7 +12,7 @@ layout: base.njk
 		<img src="./assets/solomon.jpg" alt="solomon" class="solomon">
 		</div>
 	</header>
-	<main class="content wrapper flex-container">
+	<main class="content flex-container">
 
 		<section class="" id="section-one">
 
@@ -47,18 +47,33 @@ layout: base.njk
 			<h2>smartan <span>story</span></h2>
 
 		</section>
-		<section class="becoming wrapper flex-container" id="section-four">
+		<section class="becoming-a-smartan" id="section-three">
 			<h2>becoming a <span>smartan</span></h2>
-			<section class="becoming-content">
-				<article class="wrapper flex-container">
+			<section class="sec3-content">
+				<article>
 					<h3><span>the</span> crucible</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium sequi voluptate aliquid nostrum quas alias, dignissimos sint voluptas voluptatum!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum nesciunt maiores quos rem! Tempore, optio. Blanditiis beatae quasi amet?</p>
+						{%- from "components/button/macro.njk" import button -%}
+					
+						{{button ({text: "learn more"}) }}
 				</article>
-				<div>
-					<img src="" alt="">
-					<div class="circle"></div>
+				<div class="sec-3-img">
+					<img src="./assets/mia.png" alt="" />
+					{# <div id="circle2"></div> #}
+					<div id="smallcircle"></div>
 				</div>
 			</section>
 		</section>
 	</main>
+	<section class="the-consortium">
+		<article>
+			<h3>the consortium</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque quo dignissimos dolore quidem delectus.</p>
+			
+			{%- from "components/button/macro.njk" import button -%}
+					
+			{{button ({text: "learn more"}) }}
+		<img src="./assets/consortium.png" alt="">
+		</article>
+	</section>
 </main>

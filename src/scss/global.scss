@@ -52,7 +52,8 @@ p{
 }
 
 .wrapper{
-    width: 100vw; height: auto;
+    width: 100vw; 
+    height: auto;
     overflow-x: hidden;
 }
 
@@ -139,6 +140,9 @@ p{
     text-transform: capitalize;
     border-radius: 50px;
     border: none;
+    font-size: .95rem;
+    word-spacing: .5rem;
+    font-weight: 700;
 }
 
 
@@ -151,3 +155,56 @@ p{
     color: #fff
 }
 
+
+// --------------footer------------
+
+.footer{
+    width: 100%;
+    padding: 20px;
+    background-color: vars.$gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 30px;
+    div#subscribe-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 20px;
+            label{
+                font-size:1.12rem;
+            }
+            input{
+                width: 300px;
+                padding: 15px;
+                border: solid;
+                border-radius: 50px;
+
+            }
+        }
+    }
+
+    div#address{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    ul#socials{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
