@@ -8,8 +8,17 @@ layout: base.njk
 	<header class="flex-container">
 		<h1>meet the <span>smartans</span></h1>
 		<p>smartans are young smart africans who are passionate about changing the african narrative and positioning themselves for global impact</p>
-		<div class="img-container">
-		<img src="./assets/solomon.jpg" alt="solomon" class="solomon">
+		<section class="image-carousel">
+			<div class="img-container">
+				<img src="./assets/solomon.jpg" alt="solomon" class="image" id="solomon">
+			</div>
+			<div class="img-container">
+				<img src="./assets/angel.jpg" alt="angel" class="image" id="angel">
+			</div>
+			<div class="img-container">
+				<img src="./assets/david.jpg" alt="david" class="image" id="david">
+			</div>
+		</section>
 		</div>
 	</header>
 	<main class="content flex-container">
@@ -45,7 +54,7 @@ layout: base.njk
 		</section>
 		<section class="story wrapper flex-container" id="section-three" >
 			<h2>smartan <span>story</span></h2>
-
+			{% include "story-grid.njk" %}
 		</section>
 		<section class="becoming-a-smartan" id="section-three">
 			<h2>becoming a <span>smartan</span></h2>
