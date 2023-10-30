@@ -1,0 +1,43 @@
+@use "./vars";
+
+
+
+.video-card{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 0 auto;
+
+    .video-card-image{
+        position: relative;
+    }
+
+    .video-card-image img{
+        width: 100%;
+        border-radius: 7px;
+        filter: grayscale(50%)
+    }
+
+    .video-card-image svg{
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        position: absolute;
+        top: 40%;
+        left: 80px;
+        path{
+            fill: vars.$tomato;
+        }
+    }
+
+    .video-card-content h3{
+        font-size: 1.6rem;
+    }
+
+    .video-card-content p{
+        font-size: .7rem;
+    }
+}
