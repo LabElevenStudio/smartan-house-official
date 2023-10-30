@@ -10,10 +10,6 @@
 }
 
 
-
-/* utility classes */
-
-
 .flex-container{
     display: flex;
 }
@@ -66,8 +62,6 @@ p{
     display: grid;
 }
 
-
-/* -----------navigation---------- */
 #navigation{
     position: relative;
     justify-content: space-between;
@@ -79,7 +73,6 @@ p{
     width: 120px;
 }
 
-//hamburger animation
 .hamburger {
     position: relative;
     cursor: pointer;
@@ -90,9 +83,7 @@ p{
 }
 
 .hamburger svg {
-    /* The size of the SVG defines the overall size */
     height: 3em;
-    /* Define the transition for transforming the SVG */
     -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,7 +96,6 @@ p{
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
-    /* Define the transition for transforming the Stroke */
     -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -147,8 +137,13 @@ p{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
     height: 100%;
-    opacity: 0;
+    position: relative;
+
+    li{
+        opacity: 0;
+    }
 
     li a{
         font-weight: 700;
@@ -171,17 +166,46 @@ p{
 }
 
 
-
-.secondary{
-    width: 80px;
-    padding: 20px;
-    border: 2px solid #fff;
-    border-radius: 7px;
-    color: #fff
+.btn-accent{
+    width: 180px;
+    padding: 7px;
+    background-color: vars.$beige;
+    color: #000;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: none;
+    font-size: .95rem;
+    word-spacing: .5rem;
+    font-weight: 700;
 }
 
 
-// --------------footer------------
+.btn-secondary{
+    width: 180px;
+    padding: 15px;
+    background-color: vars.$beige;
+    color: #000;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: none;
+    font-size: .95rem;
+    word-spacing: .5rem;
+    font-weight: 700;
+}
+
+.btn-bordered{
+    width: 100px;
+    padding: 5px;
+    background: none;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+    font-size: .5rem;
+    word-spacing: .3rem;
+    font-weight: 700;
+}
+
 
 .footer{
     width: 100%;
@@ -191,7 +215,10 @@ p{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    row-gap: 30px;
+    row-gap: 60px;
+    background-color: vars.$light-beige;
+
+    
 
     img{
         width: 150px;
@@ -201,8 +228,14 @@ p{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        row-gap: 10px;
-        
+        row-gap: 20px;
+
+        h3{
+            text-align: center;
+            font-size: 1.35rem;
+            font-weight: 500;
+            inline-size: 300px;
+        }
         form{
             display: flex;
             flex-direction: column;
@@ -225,6 +258,29 @@ p{
         }
     }
 
+    div#footer-links{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: first baseline;
+        padding: 0px 5px;
+        dl{
+            display: flex;
+            flex-direction: column;
+            align-items: first baseline;
+            justify-content: space-between;
+            row-gap: 10px;
+            text-align: center;
+            h3{
+                font-size: 1.2rem;
+            }
+            dt a{
+                font-size: .95rem;
+                color: black;
+            }
+        }
+    }
+
     div#address{
         display: flex;
         flex-direction: column;
@@ -232,11 +288,188 @@ p{
         align-items: center;
         text-align: center;
     }
+}
 
-    ul#socials{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+#copy{
+    font-size: .8rem;
+}
+
+
+@media (min-width: 600px){
+    
+    .hamburger {
+        display: none;
+    } 
+    
+    #inner-nav{
+        flex-direction: row;
+        background: none;
+        position: relative;
+        width: 80%;
+        justify-content: space-between;
         align-items: center;
+    }
+    
+    
+    #inner-nav ul{
+        flex-direction: row;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        column-gap: 20px;
+    
+        li{
+            opacity: 1;
+        }
+    
+        li a{
+            font-weight: 700;
+            color: #000;
+        }
+    }
+    
+    
+    .btn-primary{
+        width: 180px;
+        padding: 15px;
+        background-color: vars.$green;
+        color: #fff;
+        text-transform: capitalize;
+        border-radius: 50px;
+        border: none;
+        font-size: .95rem;
+        word-spacing: .5rem;
+        font-weight: 700;
+    }
+    
+    
+    .btn-accent{
+        width: 180px;
+        padding: 7px;
+        background-color: vars.$beige;
+        color: #000;
+        text-transform: capitalize;
+        border-radius: 50px;
+        border: none;
+        font-size: .95rem;
+        word-spacing: .5rem;
+        font-weight: 700;
+    }
+    
+    
+    .btn-secondary{
+        width: 180px;
+        padding: 15px;
+        background-color: vars.$beige;
+        color: #000;
+        text-transform: capitalize;
+        border-radius: 50px;
+        border: none;
+        font-size: .95rem;
+        word-spacing: .5rem;
+        font-weight: 700;
+    }
+    
+    .btn-bordered{
+        width: 100px;
+        padding: 5px;
+        background: none;
+        color: #fff;
+        text-transform: capitalize;
+        border-radius: 50px;
+        border: 1.5px solid #fff;
+        font-size: .5rem;
+        word-spacing: .3rem;
+        font-weight: 700;
+    }
+    
+    
+    .footer{
+        width: 100%;
+        padding: 20px;
+        background-color: vars.$gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 60px;
+        background-color: vars.$light-beige;
+    
+        
+    
+        img{
+            width: 150px;
+        }
+        div#subscribe-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 20px;
+    
+            h3{
+                text-align: center;
+                font-size: 1.35rem;
+                font-weight: 500;
+                inline-size: 300px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                row-gap: 20px;
+                label{
+                    font-size:1.12rem;
+                    font-weight: 700;
+                    position: relative;
+                    top: 10px;
+                }
+                input{
+                    width: 300px;
+                    padding: 15px;
+                    border: solid;
+                    border-radius: 50px;
+    
+                }
+            }
+        }
+    
+        div#footer-links{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: first baseline;
+            padding: 0px 5px;
+            dl{
+                display: flex;
+                flex-direction: column;
+                align-items: first baseline;
+                justify-content: space-between;
+                row-gap: 10px;
+                text-align: center;
+                h3{
+                    font-size: 1.2rem;
+                }
+                dt a{
+                    font-size: .95rem;
+                    color: black;
+                }
+            }
+        }
+    
+        div#address{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    
+    #copy{
+        font-size: .8rem;
     }
 }

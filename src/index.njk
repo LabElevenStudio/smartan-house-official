@@ -11,12 +11,57 @@ layout: base.njk
 		<section class="image-carousel">
 			<div class="img-container">
 				<img src="./assets/solomon.jpg" alt="solomon" class="image" id="solomon">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
 			</div>
 			<div class="img-container">
 				<img src="./assets/angel.jpg" alt="angel" class="image" id="angel">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
 			</div>
 			<div class="img-container">
 				<img src="./assets/david.jpg" alt="david" class="image" id="david">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
+			</div>
+			<div class="img-container">
+				<img src="./assets/solomon.jpg" alt="solomon" class="image" id="solomon">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
+			</div>
+			<div class="img-container">
+				<img src="./assets/angel.jpg" alt="angel" class="image" id="angel">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
+			</div>
+			<div class="img-container">
+				<img src="./assets/david.jpg" alt="david" class="image" id="david">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
+			</div>
+			<div class="img-container">
+				<img src="./assets/solomon.jpg" alt="solomon" class="image" id="solomon">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
+			</div>
+			<div class="img-container">
+				<img src="./assets/angel.jpg" alt="angel" class="image" id="angel">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
+			</div>
+			<div class="img-container">
+				<img src="./assets/david.jpg" alt="david" class="image" id="david">
+				{%- from "components/borderbtn/macro.njk" import borderbtn -%}
+				
+				{{borderbtn ({text: 'learn more', class: 'btn-bordered', type: 'button'}) }}
 			</div>
 		</section>
 		</div>
@@ -25,10 +70,15 @@ layout: base.njk
 
 		<section class="" id="section-one">
 
-			<div id="img-wrapper">
-				<img src="./assets/brainandmarvel.png" alt="">
-				<div class="circle"></div>
-			</div>
+			<svg viewBox="0 0 300 800" width="300" height="800" preserveAspectRatio="none">
+				<rect 
+				x="25" y="620" width="250" height="180" rx="10" ry="10" />
+				<image x="10" y="350" width="300" height="600"  href="/assets/brainandmarvel.png" />
+			</svg>
+
+			{# <div id="img-container">
+				<img src="/assets/brainandmarvel.png" alt="">
+			</div> #}
 
 			<article class="flex-container">
 				<h2>When young people are passionate about change.</h2>
@@ -43,22 +93,62 @@ layout: base.njk
 				<h2>smartan <span>signals</span></h2>
 				<p>The smartan signals are intrinsic attributes that distingushes a smartan from the crowd and makes them fit for any role.</p>
 			</article>
-			<section class="grid-container signals-grid">
-				<div class="signals-grid-item"></div>
-				<div class="signals-grid-item"></div>
-				<div class="signals-grid-item"></div>
-				<div class="signals-grid-item"></div>
-				<div class="signals-grid-item"></div>
-				<div class="signals-grid-item"></div>
+			<section class="grid-container signals-grid" id="adorable">
+				<div class="signals-grid-item">
+					<object data="/assets/adorable.svg" type=""></object>
+					<h3>Adorable</h3>
+				</div>
+				<div class="signals-grid-item" id="creative">
+					<object data="/assets/creative.svg" type=""></object>
+					<h3>Creative</h3>
+				</div>
+				<div class="signals-grid-item" id="deepwork">
+					<object data="/assets/deepwork.svg" type=""></object>
+					<h3>Deepwork</h3>
+				</div>
+				<div class="signals-grid-item" id="spiritual">
+					<object data="/assets/spiritual.svg
+					" type=""></object>
+					<h3>Spiritual</h3>
+				</div>
+				<div class="signals-grid-item" id="unforced-rhythm">
+					<object data="/assets/rhythm.svg" type=""></object>
+					<h3>Unforced Rhythm</h3>
+				</div>
+				<div class="signals-grid-item" id="youthful">
+					<object data="/assets/youthful.svg" type=""></object>
+					<h3>Youthful and Trendy</h3>
+				</div>
 			</section>
 		</section>
-		<section class="story wrapper flex-container" id="section-three" >
+		<section class="story wrapper flex-container" id="section-four" >
 			<h2>smartan <span>story</span></h2>
 			{% include "story-grid.njk" %}
 		</section>
+
+		<section class="projects" id="section-three">
+			<h2>Projects</h2>
+			<div class="project-card">
+				<img src="/assets/globalchat.png" alt="global chat">
+				<h3>Global Chat With African Smartans</h3>
+
+				{%- from "components/button/macro.njk" import button -%}
+				
+				{{button ({text: 'learn more', secondary: "btn-secondary" }) }}
+			</div>
+			<div class="project-card">
+				<img src="/assets/stateofthefuture.png" alt="state of the future">
+				<h3>State of the future</h3>
+
+				{%- from "components/button/macro.njk" import button -%}
+				
+				{{button ({text: 'learn more', secondary: "btn-secondary"}) }}
+			</div>
+		</section>
+		
 		<section class="becoming-a-smartan" id="section-three">
 			<h2>becoming a <span>smartan</span></h2>
-			<section class="sec3-content">
+			<section class="sec4-content">
 				<article>
 					<h3><span>the</span> crucible</h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum nesciunt maiores quos rem! Tempore, optio. Blanditiis beatae quasi amet?</p>
@@ -66,10 +156,9 @@ layout: base.njk
 					
 						{{button ({text: "learn more"}) }}
 				</article>
-				<div class="sec-3-img">
-					<img src="./assets/mia.png" alt="" />
-					{# <div id="circle2"></div> #}
-					<div id="smallcircle"></div>
+				<div class="sec4-img">
+					<img src="/assets/mia.png" width="300">
+					<div class="mia-bg"></div>
 				</div>
 			</section>
 		</section>
