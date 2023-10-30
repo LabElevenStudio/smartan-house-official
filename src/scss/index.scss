@@ -120,6 +120,7 @@
 
         @media (min-width: 600px){
             flex-direction: row;
+            align-items: center;
         }
 
        svg{
@@ -137,8 +138,26 @@
             row-gap: 20px;
             text-align: center;
 
+            @media (min-width: 600px){
+                
+            }
+
             h2{
                 font-size: 1.8rem;
+                @media (min-width: 600px){
+                    font-size: 3rem;
+                    inline-size: 500px;
+                    word-wrap: break-word;
+                    text-align: left;
+                }
+            }
+
+            p{
+                @media (min-width: 600px){
+                    font-size: 1.2rem;
+                    inline-size: 500px;
+                    word-wrap: break-word;
+                }
             }
         }
     }
