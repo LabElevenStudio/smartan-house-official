@@ -123,23 +123,60 @@
             align-items: center;
         }
 
-       svg{
-            rect{
-                fill: vars.$beige;
+    //    svg{
+    //         rect{
+    //             fill: vars.$beige;
+    //         }
+    //    }
+
+        .img-container{
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+           
+            @media (min-width: 600px){
+                width: 500px;
+
             }
-       }
+
+            img{
+                width: 100%;
+                aspect-ratio: 1;
+                position: relative;
+                z-index: 2;
+            }
+            
+            #box{
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+                background-color: vars.$beige;
+                position: absolute;
+                top: 0;
+                left: 0px;
+                z-index: 1;
+                @media (min-width: 600px){
+                    width: 400px;
+                    left: 60px;
+                    top: 40%;
+                }
+            }
+        }
 
 
         article {
             width: 100%;
             flex-direction: column;
             justify-content: space-evenly;
-            align-items: center;
+            align-items: flex-start;
             row-gap: 20px;
             text-align: center;
 
             @media (min-width: 600px){
-                
+                width: 40%;
             }
 
             h2{
@@ -157,66 +194,13 @@
                     font-size: 1.2rem;
                     inline-size: 500px;
                     word-wrap: break-word;
+                    font-size: 500;
                 }
             }
         }
     }
 
 
-}
-
-
-.signals {
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    row-gap: 25px;
-    margin-bottom: 50px;
-
-    article {
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        h2 {
-            text-transform: capitalize;
-            margin-bottom: 10px;
-
-            span {
-                font-weight: 500;
-            }
-        }
-
-        p {
-            text-align: center;
-            font-size: .9rem;
-        }
-    }
-
-    .signals-grid {
-        grid-template-columns: repeat(autofill, minmax(250px, 1fr));
-        grid-template-rows: 1fr;
-        row-gap: 20px;
-
-        .signals-grid-item {
-            width: 250px;
-            height: 250px;
-            border-radius: 15px;
-            background-color: hsl(0, 0%, 85%);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-            // object{
-            //     width: 150px;
-            // }
-
-            h3{
-                font-size: 1.4rem;
-            }
-        }
-    }
 }
 
 
