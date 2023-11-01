@@ -105,6 +105,10 @@
     justify-content: space-between;
     align-items: center;
     row-gap: 50px;
+
+    section{
+        margin-bottom: 100px;
+    }
     
     #section-one {
         width: 100%;
@@ -271,7 +275,8 @@
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
+    row-gap: 50px;
 
     h2 span {
         font-weight: 500;
@@ -300,9 +305,8 @@
     }
 
     .sec4-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         align-items: center;
     }
 }
@@ -312,11 +316,18 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    row-gap: 25px;
+    row-gap: 45px;
     position: relative;
     z-index: 1;
     margin-bottom: 80px;
+    justify-self: center;
+    align-self: center;
+    @media (min-width: 600px){
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
  
 
     h3{
@@ -328,6 +339,9 @@
     }
     p{
         text-align: center;
+        @media (min-width: 600px){
+            text-align: left;
+        }
     }
 }
 
@@ -338,6 +352,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 20px;
 
     img{
         width: 250px;
@@ -400,15 +415,22 @@
 .projects{
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    row-gap: 20px;
+    row-gap: 50px;
 
     h2{
         text-align: center;
         font-weight: 500;
+        // margin-bottom: 50px;
+    }
+
+    .project-card-grid{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     }
 
     .project-card{
@@ -422,6 +444,7 @@
         align-items: center;
         justify-content: space-around;
         row-gap: 25px;
+        justify-self: center;
         h3{
             font-size: 1.3rem;
             font-weight: 700;
